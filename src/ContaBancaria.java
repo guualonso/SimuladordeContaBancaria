@@ -13,7 +13,7 @@ public class ContaBancaria {
     public void depositar(double valor){
         if (valor > 0) {
             saldo += valor;
-            System.out.println("Depósito de R$ " + valor + "realizado com sucesso");
+            System.out.println("Depósito de R$ " + valor + " realizado com sucesso");
         }
         else {
             System.out.println("Valor inválido para depósito");
@@ -29,7 +29,7 @@ public class ContaBancaria {
         }
     }
     public void exibirSaldo(){
-        System.out.println("Saldo atual: R$" + saldo);
+        System.out.println("Saldo atual: R$ " + saldo);
     }
 
     public int getNumeroDaConta() {

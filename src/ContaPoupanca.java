@@ -1,5 +1,3 @@
-import java.text.DecimalFormat;
-
 public class ContaPoupanca extends ContaBancaria {
     private double taxaCDI;
 
@@ -10,9 +8,10 @@ public class ContaPoupanca extends ContaBancaria {
 
     public void aplicarRendimentoCDI() {
         double rendimento = getSaldo() * taxaCDI/100;
+        rendimento = Math.round(rendimento * 100.0) / 100.0;
         depositar(rendimento);
-        DecimalFormat df = new DecimalFormat("#,##0.00");
-        System.out.println("Rendimento CDI aplicado: R$" + df.format(rendimento));
+        System.out.println(String.format("Rendimento CDI aplicado: R$%.2f", rendimento));
+
     }
 
     public void simularMeses(int meses) {
