@@ -13,7 +13,7 @@ public class Main {
             System.out.print("Escolha: ");
 
             int opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpar buffer
+            scanner.nextLine();
 
             switch (opcao) {
                 case 1:
@@ -82,7 +82,7 @@ public class Main {
             System.out.println("2. Sacar");
             System.out.println("3. Ver Saldo");
             System.out.println("4. Histórico");
-            System.out.println("5. Simular Rendimento (Poupança)");
+            System.out.println("5. Simular e aplicar investimento");
             System.out.println("6. Voltar");
             System.out.print("Escolha: ");
 
@@ -111,12 +111,10 @@ public class Main {
                     break;
 
                 case 5:
-                    if (conta instanceof ContaPoupanca) {
-                        System.out.print("Quantos meses para simular: ");
-                        int meses = scanner.nextInt();
-                        ((ContaPoupanca) conta).simularMeses(meses);
+                    if(conta instanceof ContaPoupanca) {
+                        ((ContaPoupanca) conta).simularEAplicar(scanner);
                     } else {
-                        System.out.println("Este recurso é apenas para contas poupança!");
+                        System.out.println("Recurso disponível apenas para conta poupança!");
                     }
                     break;
 
