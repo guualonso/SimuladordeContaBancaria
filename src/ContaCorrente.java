@@ -20,7 +20,13 @@ public class ContaCorrente extends ContaBancaria {
             System.out.println("Saldo insuficiente para saque.");
         }
     }
+
     public void exibirLimite() {
         System.out.println("Seu limite do cheque especial é de R$ " + limiteChequeEspecial);
+    }
+
+    public void cobrarTaxaManutencao(double taxa) {
+        sacar(taxa);
+        System.out.println("Taxa de manutenção cobrada: R$" + taxa);
     }
 }
