@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Main {
-    private static Banco banco = new Banco();
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Banco banco = new Banco();
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         while (true) {
@@ -122,7 +122,7 @@ public class Main {
                     return; // Retorna ao menu principal
 
                 default:
-                    System.out.println("Opção inválida!");
+                    System.out.println("Opção inválida! ");
             }
         }
     }
